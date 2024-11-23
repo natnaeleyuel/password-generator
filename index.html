@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+     minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no">
+    <title>PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="css/passwordGenerator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="body">
+    <div id="follower"></div>
+    <button id="onofBtn" onclick="passwordGene(), onFunction()" style="background-image: url('images/onButton.png')"></button>
+    <h1 id="H1">
+        <div id="div1">
+            <span class="spBlack" id="spP">P</span>
+            <span class="spWhite">a</span>
+            <span class="spBlack">s</span>
+            <span class="spWhite">s</span>
+            <span class="spBlack">w</span>
+            <span class="spWhite">o</span>
+            <span class="spBlack">r</span>
+            <span class="spWhite" id="spD">d</span>
+        </div>
+        <div id="div2">
+            <span class="spBlack">g</span>
+            <span class="spWhite">e</span>
+            <span class="spBlack">n</span>
+            <span class="spWhite">e</span>
+            <span class="spBlack">r</span>
+            <span class="spWhite">a</span>
+            <span class="spBlack">t</span>
+            <span class="spWhite">o</span>
+            <span class="spBlack">r</span>
+        </div>
+        <img src="images/password.jpg" id="imgPassword" alt="password is key"><br>
+    </h1>
+    <div id="mainDiv">
+        <div id="subDiv">
+            <div id="div3" class="common">
+                <h3>The Password Struggle is Real</h3>
+                <p id="idP1">
+                    Let’s admit it: we’ve all been guilty of using “password123” or 
+                    our favorite pizza topping as a password. 🍕 While it’s easy to 
+                    remember, it’s also dangerously easy for hackers to guess, which 
+                    is why it's a terrible idea! And nobody wants their secret diary 
+                    or treasure map (aka your accounts) falling into the wrong hands. 😱
+                </p>
+            </div>
+            <div id="div4" class="common">
+                <h3>Enter the Password Generator!</h3>
+                <p id="idP2">
+                    Welcome to Password Generator – your one-stop shop for uncrackable, 
+                    super-strong passwords! 🎉 With just a click, we’ll whip up a unique 
+                    blend of letters, numbers, and symbols that’ll leave hackers scratching 
+                    their heads. It’s like creating a master key that only YOU can use, but 
+                    don’t worry, we won’t make you memorize “X8@rZ!1#”. 🤯
+                </p>
+            </div>
+            <div id="div5" class="common">
+                <h3>Secure Your Digital Kingdom</h3>
+                <p id="idP3">
+                    Ready to seriously level up your security game? 🔒 Hit that button and let 
+                    us generate a password so strong, it could practically bench-press your old 
+                    password! Your data deserves the best protection, and we’re here to make sure 
+                    it gets exactly that. Remember, a great password is like a great joke – you’ll 
+                    definitely want to keep it to yourself! 😉
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="generate">
+        <h2>Generate Now</h2>
+        <div>
+            <p id="result">Password</p>
+            <input type="number" id="passlength" min="0" placeholder="0" max="50" required="number">
+        </div>
+        <button id="generate" onclick="generateFun()">Generate</button>
+        <div>
+            <input type="checkbox" id="number" class="checkbox" id="number">
+            <label for="numbers" class="checkboxLabel">Number</label>
+            <input type="checkbox" id="lowercase" class="checkbox" id="lowercase">
+            <label for="lowercase" class="checkboxLabel">Lowercase</label>
+            <input type="checkbox" id="uppercase" class="checkbox" id="uppercase">
+            <label for="uppercase" class="checkboxLabel">Uppercase</label>
+            <input type="checkbox" id="symbol" class="checkbox" id="symbol">
+            <label for="symbols" class="checkboxLabel">Symbols</label>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="subContainer">
+                <div class="part">
+                    <h4>legal</h4>
+                    <ul>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">terms of service</a></li>
+                        <li><a href="#">cookie policy</a></li>
+                        <li><a href="#">disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="part">
+                    <h4>help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">user guide</a></li>
+                        <li><a href="#">report problem</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="part">
+                    <h4>community</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">signup</a></li>
+                        <li><a href="#">login</a></li>
+                    </ul>
+                </div>
+                <div class="part">
+                    <h4>follow us</h4>
+                    <div class="icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <h4>credits</h4>
+                    <div class="icons">
+                        <a href="#"><i class="fa-solid fa-font-awesome"></i></a>
+                        <a href="#"><i class="fa-brands fa-figma"></i></a>
+                        <a href="#"><i class="fa-brands fa-webflow"></i></a>
+                        <a href="#"><i class="fa-solid fa-font"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div id="copyRight">
+                <p>&copy; 2024 Natnael Eyuel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/passwordGenerator.js"></script>
+</body>
+</html>
